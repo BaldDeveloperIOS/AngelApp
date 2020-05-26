@@ -1,14 +1,14 @@
 //
 //  AppDelegate.swift
-//  AngelApp
+//  Tests
 //
-//  Created by chauveau on 26/05/2020.
-//  Copyright © 2020 chauveau. All rights reserved.
+//  Created by helenepetitjean on 10/05/2020.
+//  Copyright © 2020 helenepetitjean. All rights reserved.
 //
-
 import UIKit
 
 @UIApplicationMain
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
@@ -34,4 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
+
+
 
