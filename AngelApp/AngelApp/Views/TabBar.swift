@@ -41,7 +41,8 @@ struct CircleTabView : View {
                         
                 }
                 else{
-                    Map()   .navigationBarTitle("Carte", displayMode: .inline)
+                    Map()
+                        .navigationBarTitle("Carte", displayMode: .inline)
                 }
             }
             CircleTab(index: self.$index)

@@ -19,7 +19,7 @@ struct MapView: UIViewRepresentable {
     
     let map = MKMapView()
     let locationManager = CLLocationManager()
-    let departCoordinate = CLLocationCoordinate2D(latitude: 43.29458, longitude: 5.3692811)
+    let departCoordinate = CLLocationCoordinate2D(latitude: 43.298973, longitude: 5.378508)
     let destinationCoordinate = CLLocationCoordinate2D(latitude: 43.295819, longitude: 5.379739)
     let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 43.3445, longitude: 5.38), latitudinalMeters: 20000, longitudinalMeters: 20000)
     
