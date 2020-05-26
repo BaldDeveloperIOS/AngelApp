@@ -18,7 +18,7 @@ struct Map: View {
         Refuge(name: "La vieille pelle", adresse: "37 Avenue Saint-Jean, 13002 Marseille", horaires: "19h - Minuit", isOpen: true, type: .restauration, latitude: 43.287947, longitude: 5.362256),
         Refuge(name: "Le Trolley Bus", adresse: "24 Quai de Rive Neuve, 13007 Marseille", horaires: "22h - 5h", isOpen: true, type: .nightClub, latitude: 43.300754, longitude: 5.363086),
         
-        Refuge(name: "VIP Room", adresse: " 40 Rue Saint-Pierre, 13005 Marseille", horaires: "22h - 5h", isOpen: true, type: .nightClub, latitude: 43.296069, longitude: 5.379709),
+        Refuge(name: "VIP Room", adresse: " 40 Rue Saint-Pierre, 13005 Marseille", horaires: "22h - 5h", isOpen: true, type: .nightClub, latitude: 43.297024, longitude: 5.379445),
         Refuge(name: "Le BlackStone", adresse: "10 Boulevard Gustave Ganay, 13009 Marseille", horaires: "10h - 2h", isOpen: true, type: .bar,latitude: 43.289759, longitude: 5.38217),
         Refuge(name: "Chez Quan", adresse: "148 Avenue Pierre Mendès France, 13008 Marseille", horaires: "19h - Minuit", isOpen: true, type: .restauration, latitude: 43.28776, longitude: 5.374331),
         Refuge(name: "Le Bazar", adresse: " 90 Boulevard Rabatau, 13008 Marseille", horaires: "22h - 5h", isOpen: true, type: .nightClub, latitude: 43.298973, longitude: 5.378508),

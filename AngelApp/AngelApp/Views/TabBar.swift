@@ -38,11 +38,12 @@ struct CircleTabView : View {
                 if self.index == 0{
                     Profile()
                         .navigationBarTitle("Profil", displayMode: .inline)
-                        
+                        .navigationBarItems(trailing: Edit())
                 }
                 else{
                     Map()
                         .navigationBarTitle("Carte", displayMode: .inline)
+                    .navigationBarItems(trailing: Text(""))
                 }
             }
             CircleTab(index: self.$index)

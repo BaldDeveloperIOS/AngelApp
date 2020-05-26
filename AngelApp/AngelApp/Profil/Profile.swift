@@ -20,7 +20,7 @@ struct Profile: View {
                 ButtonsProfile()
                 Spacer(minLength: 100)
              //   TabBar()
-            }.padding(.top)
+                }.padding(.top)
                 
                 
     }
@@ -31,4 +31,12 @@ struct Profile_Previews: PreviewProvider {
     static var previews: some View {
         Profile()
     }
+}
+
+struct Edit: View {
+var body: some View {
+ NavigationLink(destination: EmptyProfile(), label: {
+       Text("Editer")
+   })
+}
 }
