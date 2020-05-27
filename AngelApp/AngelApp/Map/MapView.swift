@@ -20,7 +20,7 @@ struct MapView: UIViewRepresentable {
     let map = MKMapView()
     let locationManager = CLLocationManager()
     let departCoordinate = CLLocationCoordinate2D(latitude: 43.298973, longitude: 5.378508)
-    let destinationCoordinate = CLLocationCoordinate2D(latitude: 43.295819, longitude: 5.379739)
+    let destinationCoordinate = CLLocationCoordinate2D(latitude: 43.297024, longitude: 5.379445)
     let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 43.3445, longitude: 5.38), latitudinalMeters: 20000, longitudinalMeters: 20000)
     
     
@@ -139,7 +139,7 @@ struct MapView: UIViewRepresentable {
                 self.parent.map.removeAnnotations(self.parent.map.annotations)
                 self.parent.map.addAnnotation(point)
                 
-                let region = MKCoordinateRegion(center: location!.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
+                let region = MKCoordinateRegion(center: location!.coordinate, latitudinalMeters: 5000, longitudinalMeters: 5000)
                 self.parent.map.region = region
                 
             }

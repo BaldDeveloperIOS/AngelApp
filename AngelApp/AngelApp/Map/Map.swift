@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct Map: View {
+    @Environment (\.presentationMode) var presentationMode
     @State var selectedRefugeAnnotation: RefugeAnnotation?
     @State var isActive: Bool = false
     
@@ -37,17 +38,21 @@ struct Map: View {
     
     var body: some View {
         MapView(selectedRefugeAnnotation: $selectedRefugeAnnotation, isActive: $isActive, annotations: refuges)
-            //  .navigationBarTitle("Carte", displayMode: .inline)
+              .navigationBarTitle("Carte", displayMode: .inline)
             .edgesIgnoringSafeArea(.all)
             .sheet(item: $selectedRefugeAnnotation, onDismiss: {
                 print("On dismiss")
             }) {
                 refugeAnnotation in
                 VStack{
+                    Button(action: {
+                        print ("dismiss")
+                        self.presentationMode.wrappedValue.dismiss()
+                    }){Image(systemName:"xmark.square.fill").foregroundColor(Color.purpleAngel).padding(.leading, 320)}
                     Text(refugeAnnotation.title ?? "Pas de refuge")
                         .foregroundColor(Color.purpleAngel)
                         .font(.largeTitle)
-                        .padding(.top)
+                        //.padding(.top)
                     Text(refugeAnnotation.subtitle ?? "Pas d'adresse")
                         .foregroundColor(Color.gray)
                         .font(.headline)
@@ -69,22 +74,22 @@ struct Map: View {
         }
     }
 }
-    struct RefugeAnnotationView: View {
-        @Binding var selectedRefugeAnnotation: RefugeAnnotation?
-        
-        var body: some View {
-            VStack {
-                Text(selectedRefugeAnnotation?.title ?? "Pas de refuge")
-                    .font(.largeTitle)
-                Text(selectedRefugeAnnotation?.subtitle ?? "Pas d'adresse")
-                    .font(.headline)
-                    .foregroundColor(.red)
-            }
+struct RefugeAnnotationView: View {
+    @Binding var selectedRefugeAnnotation: RefugeAnnotation?
+    
+    var body: some View {
+        VStack {
+            Text(selectedRefugeAnnotation?.title ?? "Pas de refuge")
+                .font(.largeTitle)
+            Text(selectedRefugeAnnotation?.subtitle ?? "Pas d'adresse")
+                .font(.headline)
+                .foregroundColor(.red)
         }
     }
-    
-    struct Map_Previews: PreviewProvider {
-        static var previews: some View {
-            Map()
-        }
+}
+
+struct Map_Previews: PreviewProvider {
+    static var previews: some View {
+        Map()
+    }
 }
